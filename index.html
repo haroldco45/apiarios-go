@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Apiarios G&amp;O · Miel pura y polen de abeja · Caucasia</title>
+<meta name="description" content="Apiarios G&amp;O: miel pura, miel multifloral, miel en panal y polen de abeja. Calidad segura y sostenible. Pide por WhatsApp 321 432 0118. Carrera 6 # 17-44, Caucasia.">
+<meta name="theme-color" content="#c8871a">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Apiarios G&amp;O · Miel pura y polen de abeja">
+<meta property="og:description" content="Miel pura, multifloral, en panal y polen de abeja de Caucasia. Calidad segura y sostenible. Pide por WhatsApp.">
+<meta property="og:url" content="https://apiarios-go.netlify.app/">
+<meta property="og:image" content="https://apiarios-go.netlify.app/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://apiarios-go.netlify.app/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--miel:#c8871a;--oro:#e7b53b;--oro2:#fbe6b0;--crema:#fdf6e8;--cafe:#3b2412;--cafe2:#6b4426;--rojo:#c8333a;--verde:#25a35a;--txt:#33220f}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Poppins,system-ui,sans-serif;background:var(--crema);color:var(--txt);overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:1100px;margin:0 auto;padding:0 18px}
+header{position:sticky;top:0;z-index:50;background:rgba(253,246,232,.93);backdrop-filter:blur(10px);border-bottom:1px solid #f0dfbd}
+.bar{display:flex;align-items:center;gap:10px;height:60px}
+.bar img{width:44px;height:44px;border-radius:12px;object-fit:cover;background:#fff}
+.marca{white-space:nowrap;font-family:'Alfa Slab One',serif;font-size:1.3rem;color:var(--cafe);line-height:1}
+.marca small{display:block;font-family:Poppins;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--miel);font-weight:700;margin-top:3px}
+.sp{flex:1}
+.btn-s{border:1.5px solid var(--miel);color:var(--cafe);background:#fff;border-radius:99px;padding:6px 12px;font:600 .78rem Poppins;cursor:pointer}
+.btn-s.on{background:var(--miel);color:#fff}
+#cartBtn{position:relative}
+#cartN{position:absolute;top:-6px;right:-6px;background:var(--cafe);color:#fff;border-radius:99px;font-size:.66rem;min-width:18px;height:18px;display:grid;place-items:center;padding:0 4px}
+/* hero */
+.hero{position:relative;min-height:88vh;display:flex;align-items:flex-end;overflow:hidden;color:#fff}
+.slides{position:absolute;inset:0}
+.slides img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.12);transition:opacity 1.4s ease,transform 7s ease}
+.slides img.on{opacity:1;transform:scale(1)}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(59,36,18,.05) 15%,rgba(59,36,18,.9) 100%)}
+.gota{position:absolute;top:-30px;width:14px;height:20px;background:radial-gradient(circle at 35% 35%,#ffe9a8,#e7a52b 60%,#a8650f);border-radius:50% 50% 50% 50%/60% 60% 40% 40%;z-index:1;opacity:.85;animation:cae linear infinite}
+@keyframes cae{to{transform:translateY(110vh)}}
+.hero .in{position:relative;z-index:2;padding:40px 18px 46px;max-width:1100px;margin:0 auto;width:100%}
+.chip{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.5);backdrop-filter:blur(6px);padding:6px 14px;border-radius:99px;font-size:.78rem;font-weight:600;letter-spacing:.04em}
+.hero h1{font-family:'Alfa Slab One',serif;font-weight:400;font-size:clamp(2.7rem,10vw,5.2rem);line-height:.98;margin:14px 0 8px;text-shadow:0 4px 24px rgba(0,0,0,.4)}
+.hero h1 span{color:var(--oro)}
+.hero p{max-width:580px;font-size:1.02rem;opacity:.95}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.btn{display:inline-block;border:0;border-radius:99px;padding:13px 22px;font:700 .95rem Poppins;cursor:pointer;transition:transform .2s;text-align:center}
+.btn:active{transform:scale(.96)}
+.btn.p{background:linear-gradient(135deg,var(--oro),var(--miel));color:var(--cafe);box-shadow:0 8px 24px rgba(200,135,26,.5)}
+.btn.w{background:#fff;color:var(--cafe)}
+.btn.g{background:var(--verde);color:#fff}
+.dots{display:flex;gap:6px;margin-top:22px}
+.dots i{width:22px;height:4px;border-radius:4px;background:rgba(255,255,255,.4);transition:.4s}
+.dots i.on{background:var(--oro);width:40px}
+/* cinta */
+.cinta{background:repeating-linear-gradient(45deg,#c8333a 0 18px,#d9454c 18px 36px);color:#fff;overflow:hidden;white-space:nowrap;padding:11px 0;font-weight:700;font-size:.9rem;letter-spacing:.03em}
+.cinta div{display:inline-block;animation:corre 34s linear infinite}
+.cinta span{margin:0 18px}
+.cinta span:after{content:"";display:inline-block;width:10px;height:11px;margin-left:36px;background:var(--oro);clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%);vertical-align:middle}
+@keyframes corre{to{transform:translateX(-50%)}}
+section{padding:60px 0}
+.ant{color:var(--miel);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:.76rem}
+h2{font-family:'Alfa Slab One',serif;font-weight:400;font-size:clamp(1.6rem,5vw,2.4rem);line-height:1.15;margin:8px 0 10px;color:var(--cafe)}
+h2 b{color:var(--miel);font-weight:400}
+.lead{max-width:640px;color:#7a5c3e}
+/* hoy */
+.hoy{display:grid;grid-template-columns:1.2fr 1fr;gap:18px;margin-top:24px}
+.hoyFoto{position:relative;border-radius:24px;overflow:hidden;min-height:360px;box-shadow:0 18px 40px rgba(59,36,18,.2)}
+.hoyFoto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;animation:zoom 12s ease-in-out infinite alternate}
+@keyframes zoom{to{transform:scale(1.1)}}
+.hoyFoto .tx{position:absolute;left:0;right:0;bottom:0;padding:22px;background:linear-gradient(transparent,rgba(59,36,18,.92));color:#fff}
+.hoyFoto .tx small{font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:.72rem;color:var(--oro)}
+.hoyFoto .tx h3{font-size:1.5rem;margin:4px 0}
+.hoyCol{display:grid;gap:14px}
+.card{background:#fff;border-radius:20px;padding:18px 20px;box-shadow:0 6px 20px rgba(59,36,18,.07);border:1px solid #f1e2c4}
+.card small{color:var(--miel);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:.7rem}
+.card .big{font-size:1.4rem;font-weight:800;color:var(--cafe);margin-top:4px}
+.cuenta{display:flex;gap:10px;margin-top:8px}
+.cuenta div{flex:1;background:var(--crema);border-radius:14px;text-align:center;padding:8px 4px}
+.cuenta b{display:block;font-size:1.5rem;color:var(--miel)}
+.cuenta span{font-size:.7rem;color:#8a6f50}
+.frase{font-size:1.05rem;font-weight:600;color:var(--cafe);line-height:1.4;margin-top:6px}
+/* catálogo */
+.filtros{display:flex;gap:8px;overflow-x:auto;padding:18px 0 6px;scrollbar-width:none}
+.filtros::-webkit-scrollbar{display:none}
+.filtros button{flex:none;border:1.5px solid #ead8b4;background:#fff;border-radius:99px;padding:8px 16px;font:600 .84rem Poppins;color:var(--cafe);cursor:pointer}
+.filtros button.on{background:var(--cafe);color:#fff;border-color:var(--cafe)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px;margin-top:16px}
+.prod{background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 8px 22px rgba(59,36,18,.09);display:flex;flex-direction:column;opacity:0;transform:translateY(24px);transition:.6s}
+.prod.vis{opacity:1;transform:none}
+.prod .ph{aspect-ratio:1;overflow:hidden;position:relative;background:var(--oro2)}
+.prod .ph img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.prod:hover .ph img{transform:scale(1.08)}
+.tag{position:absolute;top:12px;left:12px;background:rgba(255,255,255,.93);color:var(--cafe2);font-weight:700;font-size:.68rem;padding:4px 10px;border-radius:99px;letter-spacing:.05em;text-transform:uppercase}
+.prod .bd{padding:14px 16px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.prod h3{font-size:1.02rem;color:var(--cafe)}
+.prod p{font-size:.85rem;color:#7a5c3e;flex:1}
+.prod .pr{font-size:.78rem;color:var(--miel);font-weight:700}
+.prod button{margin-top:6px;border:0;background:var(--cafe);color:#fff;border-radius:14px;padding:10px;font:700 .86rem Poppins;cursor:pointer}
+/* kit */
+.kit{background:linear-gradient(135deg,#fff 0%,#fdf0d3 100%)}
+.kgrid2{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:24px;align-items:start}
+.opts{display:grid;gap:10px}
+.opt{display:flex;align-items:center;gap:12px;background:#fff;border:2px solid #f0dfbd;border-radius:18px;padding:10px;cursor:pointer;transition:.25s}
+.opt img{width:58px;height:58px;border-radius:12px;object-fit:cover;flex:none}
+.opt .n{flex:1;font-weight:600;font-size:.9rem;color:var(--cafe)}
+.opt .n small{display:block;font-weight:400;color:#8a6f50;font-size:.76rem}
+.opt .ck{width:26px;height:26px;border-radius:50%;border:2px solid #e2c98f;flex:none;position:relative}
+.opt.on{border-color:var(--miel);box-shadow:0 8px 20px rgba(200,135,26,.18)}
+.opt.on .ck{background:var(--miel);border-color:var(--miel)}
+.opt.on .ck:after{content:"";position:absolute;left:8px;top:4px;width:6px;height:11px;border:solid #fff;border-width:0 3px 3px 0;transform:rotate(45deg)}
+.canasta{position:sticky;top:76px;background:var(--cafe);color:#fff;border-radius:26px;padding:22px;overflow:hidden}
+.canasta h3{font-family:'Alfa Slab One',serif;font-weight:400;font-size:1.4rem;color:var(--oro)}
+.fotosKit{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:16px 0;min-height:110px}
+.fotosKit img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:14px;animation:pop .4s}
+@keyframes pop{from{transform:scale(.6);opacity:0}}
+.fotosKit .vacio{grid-column:1/-1;display:grid;place-items:center;border:2px dashed rgba(255,255,255,.25);border-radius:14px;color:#d9c3a3;font-size:.86rem;padding:20px;text-align:center}
+.canasta input,.canasta textarea{width:100%;border:0;border-radius:14px;padding:11px 13px;font:500 .92rem Poppins;margin-bottom:10px}
+/* disfrutar */
+.usos{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:24px}
+.uso{position:relative;border-radius:22px;overflow:hidden;min-height:250px;color:#fff;display:flex;align-items:flex-end}
+.uso img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1s}
+.uso:hover img{transform:scale(1.08)}
+.uso:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 30%,rgba(59,36,18,.92))}
+.uso div{position:relative;z-index:1;padding:18px}
+.uso h3{font-size:1.1rem;color:var(--oro)}
+.uso p{font-size:.86rem;opacity:.95}
+.aviso{margin-top:22px;background:#fff;border-left:5px solid var(--rojo);border-radius:14px;padding:14px 18px;font-size:.86rem;color:#5a4128}
+/* galería */
+.gal{columns:3 220px;column-gap:12px;margin-top:24px}
+.gal img{width:100%;border-radius:18px;margin-bottom:12px;cursor:zoom-in;transition:transform .4s;box-shadow:0 6px 18px rgba(0,0,0,.08)}
+.gal img:hover{transform:scale(1.02)}
+#lb{position:fixed;inset:0;background:rgba(30,18,8,.93);z-index:90;display:none;place-items:center;padding:20px}
+#lb.on{display:grid}
+#lb img{max-height:88vh;border-radius:16px}
+/* contacto */
+.contacto{background:var(--cafe);color:#fff;background-image:radial-gradient(circle at 90% 10%,rgba(231,181,59,.18),transparent 40%)}
+.contacto h2{color:#fff}.contacto .lead{color:#e8d6bd}
+.cgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:22px}
+.cgrid a,.cgrid div{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:18px;padding:18px;word-break:break-word}
+.cgrid small{color:var(--oro);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:.7rem}
+.cgrid b{display:block;font-size:1.05rem;margin-top:4px}
+.mapa{margin-top:16px;border-radius:20px;overflow:hidden;height:260px;border:0;width:100%}
+footer{background:#24150a;color:#cfb99c;text-align:center;padding:26px 18px 100px;font-size:.84rem}
+footer b{color:#fff}
+#lic{display:inline-block;margin-top:10px;padding:5px 12px;border-radius:99px;background:rgba(37,163,90,.22);color:#c7ebd3;font-weight:600;font-size:.75rem}
+#lic.v{background:#b3261e;color:#fff}
+.flot{white-space:nowrap;position:fixed;left:50%;bottom:16px;transform:translateX(-50%);z-index:60;background:var(--verde);color:#fff;border-radius:99px;padding:14px 26px;font-weight:700;box-shadow:0 10px 30px rgba(37,163,90,.45);animation:lat 2.4s infinite}
+@keyframes lat{50%{box-shadow:0 10px 30px rgba(37,163,90,.45),0 0 0 10px rgba(37,163,90,.12)}}
+#cart{position:fixed;inset:0;z-index:80;background:rgba(30,18,8,.55);display:none}
+#cart.on{display:block}
+.panel{position:absolute;right:0;top:0;bottom:0;width:min(420px,100%);background:#fff;padding:22px;overflow:auto;display:flex;flex-direction:column;gap:12px;animation:ent .35s}
+@keyframes ent{from{transform:translateX(100%)}}
+.panel input{border:1.5px solid #ead8b4;border-radius:14px;padding:11px 13px;font:500 .95rem Poppins}
+.item{display:flex;gap:10px;align-items:center;border-bottom:1px solid #f3e7cf;padding-bottom:10px}
+.item img{width:56px;height:56px;border-radius:12px;object-fit:cover;flex:none}
+.item .n{flex:1;font-size:.86rem;font-weight:600;color:var(--cafe)}
+.q{display:flex;align-items:center;gap:6px}
+.q button{width:28px;height:28px;border-radius:8px;border:1px solid #ead8b4;background:#fff;font-weight:700;cursor:pointer}
+.priv{font-size:.72rem;color:#8a6f50}
+#toast{position:fixed;top:74px;left:50%;transform:translate(-50%,-30px);background:var(--cafe);color:#fff;padding:10px 18px;border-radius:99px;font-size:.86rem;font-weight:600;opacity:0;transition:.35s;z-index:99;pointer-events:none}
+#toast.on{opacity:1;transform:translate(-50%,0)}
+@media(max-width:760px){.hoy,.kgrid2{grid-template-columns:1fr}.hoyFoto{min-height:320px}.canasta{position:static}
+ .marca{font-size:1.05rem}.marca small{display:none}.btn-s{padding:5px 9px}.bar{gap:7px}.bar img{width:38px;height:38px}
+ .grid{grid-template-columns:1fr 1fr;gap:12px}.prod .bd{padding:10px 12px 12px}.prod h3{font-size:.92rem}.prod p{font-size:.78rem}.gal{columns:2}}
+</style>
+</head>
+<body>
+<header><div class="wrap bar">
+  <img src="icon-192.png" alt="Apiarios G&amp;O">
+  <div class="marca">Apiarios G&amp;O<small data-t="hm">Miel pura y polen de abeja</small></div>
+  <div class="sp"></div>
+  <button class="btn-s on" id="bES" onclick="idioma('es')">ES</button>
+  <button class="btn-s" id="bEN" onclick="idioma('en')">EN</button>
+  <button class="btn-s" id="cartBtn" onclick="abrir()"><span data-t="nPed">Pedido</span><span id="cartN">0</span></button>
+</div></header>
+
+<div class="hero" id="hero">
+  <div class="slides" id="slides">
+    <img src="fotos/mesa.jpg" alt="" class="on">
+    <img src="fotos/miel-multifloral.jpg" alt="">
+    <img src="fotos/botellas.jpg" alt="">
+    <img src="fotos/polen-redondo.jpg" alt="">
+    <img src="fotos/dosificador-panal.jpg" alt="">
+    <img src="fotos/polen-cuadros.jpg" alt="">
+  </div>
+  <div class="in">
+    <span class="chip" data-t="chip">Caucasia · ExpoCaucasia 2026</span>
+    <h1>Apiarios <span>G&amp;O</span></h1>
+    <p data-t="sub">Miel pura, miel multifloral, miel en panal y polen de abeja. Calidad segura y sostenible, directo de nuestras colmenas a tu mesa.</p>
+    <div class="cta">
+      <a class="btn p" href="#catalogo" data-t="ver">Ver productos</a>
+      <a class="btn w" href="#" onclick="hola();return false" data-t="esc">Escribir por WhatsApp</a>
+    </div>
+    <div class="dots" id="dots"></div>
+  </div>
+</div>
+
+<div class="cinta"><div id="cinta"></div></div>
+
+<section id="hoy"><div class="wrap">
+  <span class="ant" data-t="hAnt">Hoy en Apiarios G&amp;O</span>
+  <h2 id="hoyFecha"></h2>
+  <div class="hoy">
+    <div class="hoyFoto"><img id="hoyImg" src="" alt=""><div class="tx"><small data-t="h1s">Producto del día</small><h3 id="hoyNom"></h3><p id="hoyDesc"></p></div></div>
+    <div class="hoyCol">
+      <div class="card"><small data-t="h2s">Faltan para Navidad</small><div class="cuenta" id="cuenta"></div></div>
+      <div class="card"><small data-t="h3s">Dato de la colmena</small><div class="frase" id="hoyFrase"></div></div>
+      <div class="card"><small data-t="h4s">Hora en Caucasia</small><div class="big" id="reloj"></div></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="catalogo" style="background:#fff"><div class="wrap">
+  <span class="ant" data-t="cAnt">Productos</span>
+  <h2 data-t="cTit">Del panal <b>a tu mesa</b></h2>
+  <p class="lead" data-t="cLead">Agrega lo que quieras al pedido y envíalo por WhatsApp. Apiarios G&amp;O te confirma precio, tamaño disponible y entrega.</p>
+  <div class="filtros" id="filtros"></div>
+  <div class="grid" id="grid"></div>
+</div></section>
+
+<section class="kit" id="kit"><div class="wrap">
+  <span class="ant" data-t="kAnt">Para regalar</span>
+  <h2 data-t="kTit">Arma tu <b>kit dulce</b></h2>
+  <p class="lead" data-t="kLead">Escoge lo que va en el regalo y mira cómo va quedando. Los frascos van con cinta de yute, dije de abeja dorado y cucharita de madera.</p>
+  <div class="kgrid2">
+    <div class="opts" id="opts"></div>
+    <div class="canasta">
+      <h3 data-t="tuKit">Tu kit</h3>
+      <div class="fotosKit" id="fotosKit"></div>
+      <input id="kPara" data-ph="kPara" placeholder="Para quién es">
+      <textarea id="kNota" rows="2" data-ph="kNota" placeholder="Ocasión o mensaje (cumpleaños, Navidad, amigo secreto)"></textarea>
+      <button class="btn p" style="width:100%" onclick="addKit()" data-t="kAdd">Agregar kit al pedido</button>
+    </div>
+  </div>
+</div></section>
+
+<section id="usos"><div class="wrap">
+  <span class="ant" data-t="uAnt">Ideas</span>
+  <h2 data-t="uTit">Cómo <b>disfrutarla</b></h2>
+  <div class="usos" id="usosG"></div>
+  <div class="aviso" data-t="aviso">No se recomienda dar miel a bebés menores de 1 año. Si tienes alergia al polen o a productos de la colmena, consulta a tu médico antes de consumirlos.</div>
+</div></section>
+
+<section id="galeria" style="background:#fff"><div class="wrap">
+  <span class="ant" data-t="gAnt">Galería</span>
+  <h2 data-t="gTit">Así se ve <b>de cerca</b></h2>
+  <div class="gal" id="gal"></div>
+</div></section>
+
+<section class="contacto" id="contacto"><div class="wrap">
+  <span class="ant" style="color:var(--oro)" data-t="coAnt">Contacto</span>
+  <h2 data-t="coTit">Endulza tu día</h2>
+  <p class="lead" data-t="coLead">Escríbenos para pedidos, encargos al por mayor y regalos empresariales.</p>
+  <div class="cgrid">
+    <a href="#" onclick="hola();return false"><small>WhatsApp</small><b>321 432 0118</b></a>
+    <a href="mailto:milena_merlano@hotmail.com"><small data-t="coMail">Correo</small><b>milena_merlano@hotmail.com</b></a>
+    <a href="https://www.google.com/maps/search/?api=1&query=Carrera+6+%2317-44+Caucasia+Antioquia" target="_blank" rel="noopener"><small data-t="coDir">Dirección</small><b>Carrera 6 # 17-44, Caucasia, Antioquia</b></a>
+  </div>
+  <iframe class="mapa" loading="lazy" title="Mapa" src="https://maps.google.com/maps?q=Carrera%206%2017-44%20Caucasia%20Antioquia&z=16&output=embed"></iframe>
+</div></section>
+
+<footer>
+  <div><span data-t="hecho">Desarrollada por</span> <b>Vibras Positivas HM</b> — <span data-t="der">Derechos de Autor Reservados</span> · <a href="https://wa.me/573117700431" target="_blank" rel="noopener">311 770 0431</a></div>
+  <div id="lic"></div>
+</footer>
+
+<a class="flot" href="#" onclick="abrir();return false" data-t="fl">Pedir por WhatsApp</a>
+
+<div id="cart" onclick="if(event.target===this)cerrar()"><div class="panel">
+  <div style="display:flex;align-items:center"><h2 style="font-size:1.5rem;margin:0" data-t="tuP">Tu pedido</h2><div class="sp"></div><button class="btn-s" onclick="cerrar()" data-t="cerrar">Cerrar</button></div>
+  <div id="items"></div>
+  <input id="cNom" data-ph="cNom" placeholder="Tu nombre">
+  <input id="cDir" data-ph="cDir" placeholder="Barrio o dirección de entrega">
+  <p class="priv" data-t="priv">Tus datos solo se usan para atender tu pedido por WhatsApp (Ley 1581 de 2012). No se guardan en ningún servidor.</p>
+  <button class="btn g" onclick="enviar()" data-t="env">Enviar pedido por WhatsApp</button>
+  <button class="btn-s" onclick="vaciar()" data-t="vac">Vaciar pedido</button>
+</div></div>
+
+<div id="lb" onclick="this.classList.remove('on')"><img id="lbImg" src="" alt=""></div>
+<div id="toast"></div>
+
+<script>
+const WA="573214320118";
+const T={
+es:{hm:"Miel pura y polen de abeja",nPed:"Pedido",chip:"Caucasia · ExpoCaucasia 2026",sub:"Miel pura, miel multifloral, miel en panal y polen de abeja. Calidad segura y sostenible, directo de nuestras colmenas a tu mesa.",ver:"Ver productos",esc:"Escribir por WhatsApp",hAnt:"Hoy en Apiarios G&amp;O",h1s:"Producto del día",h2s:"Faltan para Navidad",h3s:"Dato de la colmena",h4s:"Hora en Caucasia",cAnt:"Productos",cTit:"Del panal <b>a tu mesa</b>",cLead:"Agrega lo que quieras al pedido y envíalo por WhatsApp. Apiarios G&amp;O te confirma precio, tamaño disponible y entrega.",kAnt:"Para regalar",kTit:"Arma tu <b>kit dulce</b>",kLead:"Escoge lo que va en el regalo y mira cómo va quedando. Los frascos van con cinta de yute, dije de abeja dorado y cucharita de madera.",tuKit:"Tu kit",kPara:"Para quién es",kNota:"Ocasión o mensaje (cumpleaños, Navidad, amigo secreto)",kAdd:"Agregar kit al pedido",kVacio:"Toca los productos de la izquierda para armar el regalo",kKit:"Kit de regalo",kPara2:"Para",uAnt:"Ideas",uTit:"Cómo <b>disfrutarla</b>",aviso:"No se recomienda dar miel a bebés menores de 1 año. Si tienes alergia al polen o a productos de la colmena, consulta a tu médico antes de consumirlos.",gAnt:"Galería",gTit:"Así se ve <b>de cerca</b>",coAnt:"Contacto",coTit:"Endulza tu día",coLead:"Escríbenos para pedidos, encargos al por mayor y regalos empresariales.",coMail:"Correo",coDir:"Dirección",hecho:"Desarrollada por",der:"Derechos de Autor Reservados",fl:"Pedir por WhatsApp",tuP:"Tu pedido",cerrar:"Cerrar",env:"Enviar pedido por WhatsApp",vac:"Vaciar pedido",cNom:"Tu nombre",cDir:"Barrio o dirección de entrega",priv:"Tus datos solo se usan para atender tu pedido por WhatsApp (Ley 1581 de 2012). No se guardan en ningún servidor.",todos:"Todo",agregar:"Agregar al pedido",precio:"Precio por WhatsApp",vacio:"Tu pedido está vacío. Agrega algo del catálogo.",ok:"Agregado al pedido",lic:"Licencia vigente hasta el 7 de mayo de 2027",licV:"Licencia vencida · renueva con Vibras Positivas HM",dias:"días",horas:"horas",min:"min",hola:"Hola Apiarios G&O, vi su app y quiero información sobre la miel y el polen.",ped:"Hola Apiarios G&O, quiero hacer este pedido:",nombre:"Nombre",entrega:"Entrega",
+cinta:["Miel pura","Miel multifloral","Miel en panal","Polen de abeja","Calidad segura y sostenible","Directo de la colmena","Ideal para regalar","Hecho en Caucasia"],
+frases:["Para producir un kilo de miel, las abejas visitan millones de flores.","La miel multifloral reúne el néctar de muchas flores distintas: por eso cada cosecha tiene su propio sabor.","Las abejas guardan la miel en celdas de cera de seis lados: la forma que mejor aprovecha el espacio.","El polen que ves en el frasco son pequeñas bolitas que las abejas forman y cargan en sus patas.","Si la miel se cristaliza con el frío, sigue siendo buena: basta un baño de maría suave.","Guarda la miel bien tapada y lejos de la humedad; no necesita nevera.","Una colmena sana necesita flores cerca: cuidar las abejas es cuidar los cultivos.","El color de la miel depende de las flores: puede ir de dorado claro a ámbar oscuro.","Usa cuchara de madera o cucharita de miel: es la forma tradicional de servirla.","La miel en panal se come tal cual: con la cera y todo, como sale de la colmena."],
+usos:[["En el desayuno","Sobre arepa, pan, tostadas o pancakes."],["Con fruta y yogur","Un chorrito de miel y una cucharadita de polen por encima."],["En tus bebidas","Para endulzar el café, el té, la limonada o el jugo."],["Para regalar","Frascos con cucharita de madera y dije de abeja: listos para entregar."]]},
+en:{hm:"Pure honey and bee pollen",nPed:"Order",chip:"Caucasia · ExpoCaucasia 2026",sub:"Pure honey, wildflower honey, comb honey and bee pollen. Safe and sustainable quality, straight from our hives to your table.",ver:"See products",esc:"Message on WhatsApp",hAnt:"Today at Apiarios G&amp;O",h1s:"Product of the day",h2s:"Countdown to Christmas",h3s:"Hive fact",h4s:"Time in Caucasia",cAnt:"Products",cTit:"From the hive <b>to your table</b>",cLead:"Add what you want to your order and send it by WhatsApp. Apiarios G&amp;O confirms price, available sizes and delivery.",kAnt:"Gifts",kTit:"Build your <b>sweet kit</b>",kLead:"Choose what goes in the gift and watch it come together. Jars come with jute ribbon, a golden bee charm and a wooden honey dipper.",tuKit:"Your kit",kPara:"Who is it for",kNota:"Occasion or message (birthday, Christmas, Secret Santa)",kAdd:"Add kit to order",kVacio:"Tap the products on the left to build the gift",kKit:"Gift kit",kPara2:"For",uAnt:"Ideas",uTit:"How to <b>enjoy it</b>",aviso:"Honey is not recommended for babies under 1 year old. If you are allergic to pollen or hive products, check with your doctor before consuming them.",gAnt:"Gallery",gTit:"Up <b>close</b>",coAnt:"Contact",coTit:"Sweeten your day",coLead:"Message us for orders, wholesale and corporate gifts.",coMail:"Email",coDir:"Address",hecho:"Developed by",der:"All Rights Reserved",fl:"Order on WhatsApp",tuP:"Your order",cerrar:"Close",env:"Send order by WhatsApp",vac:"Clear order",cNom:"Your name",cDir:"Neighborhood or delivery address",priv:"Your data is only used to handle your WhatsApp order (Colombian Law 1581 of 2012). It is not stored on any server.",todos:"All",agregar:"Add to order",precio:"Price on WhatsApp",vacio:"Your order is empty. Add something from the catalog.",ok:"Added to order",lic:"License valid until May 7, 2027",licV:"License expired · renew with Vibras Positivas HM",dias:"days",horas:"hours",min:"min",hola:"Hi Apiarios G&O, I saw your app and I'd like information about your honey and pollen.",ped:"Hi Apiarios G&O, I'd like to place this order:",nombre:"Name",entrega:"Delivery",
+cinta:["Pure honey","Wildflower honey","Comb honey","Bee pollen","Safe and sustainable quality","Straight from the hive","Perfect gift","Made in Caucasia"],
+frases:["To make one kilo of honey, bees visit millions of flowers.","Wildflower honey gathers nectar from many different flowers, so every harvest tastes a little different.","Bees store honey in six-sided wax cells: the shape that uses space best.","The pollen in the jar is made of tiny pellets bees form and carry on their legs.","If honey crystallizes in the cold, it is still good: just warm it gently in a water bath.","Keep honey tightly closed and away from moisture; it doesn't need the fridge.","A healthy hive needs flowers nearby: caring for bees means caring for crops.","Honey color depends on the flowers: from light gold to dark amber.","Use a wooden spoon or honey dipper: the traditional way to serve it.","Comb honey is eaten as is: wax and all, just as it comes from the hive."],
+usos:[["At breakfast","On arepas, bread, toast or pancakes."],["With fruit and yogurt","A drizzle of honey and a spoon of pollen on top."],["In your drinks","To sweeten coffee, tea, lemonade or juice."],["As a gift","Jars with a wooden dipper and bee charm: ready to give."]]}};
+const CATS={miel:["Miel pura","Pure honey"],panal:["Miel en panal","Comb honey"],polen:["Polen de abeja","Bee pollen"],regalo:["Para regalar","Gifts"]};
+const P=[
+{id:"multifloral",c:"regalo",f:"fotos/miel-multifloral.jpg",n:["Miel multifloral en frasco hermético","Wildflower honey in clip-top jar"],d:["Frasco de vidrio con cierre hermético, cucharita de madera y dije de abeja.","Glass clip-top jar with wooden dipper and bee charm."]},
+{id:"frascos",c:"regalo",f:"fotos/frascos-hermeticos.jpg",n:["Frascos herméticos de colores","Colored clip-top jars"],d:["Con empaque naranja o verde, cinta de yute y cucharita.","Orange or green seal, jute ribbon and dipper."]},
+{id:"botella",c:"miel",f:"fotos/botellas.jpg",n:["Miel pura en botella","Pure honey bottle"],d:["Botella con tapa rosca, para la casa y el negocio.","Screw-cap bottle for home and business."]},
+{id:"dosificador",c:"miel",f:"fotos/dosificador.jpg",n:["Miel pura dosificadora","Squeeze honey bottle"],d:["Envase con tapa dosificadora: sirve sin regar.","Squeeze bottle with flip cap: no mess."]},
+{id:"panal",c:"panal",f:"fotos/panal-cerca.jpg",n:["Miel en panal","Comb honey"],d:["El panal tal como sale de la colmena, en bandeja.","Honeycomb straight from the hive, in a tray."]},
+{id:"panal-bandeja",c:"panal",f:"fotos/panal.jpg",n:["Bandeja de panal","Honeycomb tray"],d:["Bandeja transparente sellada con su etiqueta.","Sealed clear tray with label."]},
+{id:"polen-redondo",c:"polen",f:"fotos/polen-redondo.jpg",n:["Polen de abeja · frasco redondo","Bee pollen · round jar"],d:["Frasco de vidrio tapa negra con dije de abeja dorado.","Glass jar, black lid, golden bee charm."]},
+{id:"polen-cuadros",c:"polen",f:"fotos/polen-cuadros.jpg",n:["Polen de abeja · tapa de cuadros","Bee pollen · gingham lid"],d:["Frasco con tapa de cuadros rojos y cinta de yute.","Jar with red gingham lid and jute ribbon."]},
+{id:"vasitos",c:"regalo",f:"fotos/vasitos.jpg",n:["Presentación mini","Mini cups"],d:["Vasitos para probar o para detalles. Pregunta qué hay disponible.","Small cups to try or to give away. Ask what's available."]}];
+const KIT=["multifloral","polen-redondo","polen-cuadros","dosificador","panal","botella"];
+const USOS=["fotos/dosificador-panal.jpg","fotos/polen-mesa.jpg","fotos/botellas.jpg","fotos/miel-multifloral.jpg"];
+const GAL=["mesa","miel-multifloral","polen-redondo","botellas","dosificador-panal","polen-cuadros","frascos-hermeticos","panal-cerca","dosificadores","logo"];
+let kit=[],cart=[];
+function localGet(k){try{return localStorage.getItem(k)}catch(e){return null}}
+function localSet(k,v){try{localStorage.setItem(k,v)}catch(e){}}
+try{cart=JSON.parse(localGet("go_cart")||"[]")}catch(e){}
+const visit=+(localGet("go_v")||0);localSet("go_v",visit+1);
+let L=localGet("go_lang")||"es",cat="todos";
+const t=k=>T[L][k],ix=()=>L=="es"?0:1;
+function idioma(l){L=l;localSet("go_lang",l);document.documentElement.lang=l;bES.classList.toggle("on",l=="es");bEN.classList.toggle("on",l=="en");
+ document.querySelectorAll("[data-t]").forEach(e=>e.innerHTML=t(e.dataset.t));
+ document.querySelectorAll("[data-ph]").forEach(e=>e.placeholder=t(e.dataset.ph));
+ cinta.innerHTML=[...t("cinta"),...t("cinta")].map(x=>"<span>"+x+"</span>").join("");
+ usosG.innerHTML=t("usos").map((u,i)=>`<div class="uso"><img src="${USOS[i]}" alt="" loading="lazy"><div><h3>${u[0]}</h3><p>${u[1]}</p></div></div>`).join("");
+ filtros();pintar();hoy();lic();opts_();kitPrev();carrito()}
+// hero
+const sl=[...slides.children];let si=0;dots.innerHTML=sl.map(()=>"<i></i>").join("");
+function slide(){sl.forEach((s,i)=>s.classList.toggle("on",i==si));[...dots.children].forEach((d,i)=>d.classList.toggle("on",i==si));si=(si+1)%sl.length}
+slide();setInterval(slide,4200);
+for(let i=0;i<9;i++){const g=document.createElement("i");g.className="gota";g.style.left=(5+Math.random()*90)+"%";g.style.animationDuration=(6+Math.random()*7)+"s";g.style.animationDelay=(-Math.random()*10)+"s";g.style.transform=`scale(${.6+Math.random()*.8})`;hero.appendChild(g)}
+// hora Colombia
+function bog(){return new Date(new Date().toLocaleString("en-US",{timeZone:"America/Bogota"}))}
+function hoy(){const d=bog();
+ hoyFecha.textContent=d.toLocaleDateString(L=="es"?"es-CO":"en-US",{weekday:"long",day:"numeric",month:"long",year:"numeric"}).replace(/^./,m=>m.toUpperCase());
+ const p=P[(d.getDate()+visit)%P.length];hoyImg.src=p.f;hoyNom.textContent=p.n[ix()];hoyDesc.textContent=p.d[ix()];
+ const fr=t("frases");hoyFrase.textContent=fr[(d.getDate()*3+visit)%fr.length];cuenta_()}
+function cuenta_(){const d=bog();let nav=new Date(d.getFullYear(),11,24,18);if(d>nav)nav=new Date(d.getFullYear()+1,11,24,18);
+ const ms=nav-d,D=Math.floor(ms/864e5),H=Math.floor(ms%864e5/36e5),M=Math.floor(ms%36e5/6e4);
+ cuenta.innerHTML=`<div><b>${D}</b><span>${t("dias")}</span></div><div><b>${H}</b><span>${t("horas")}</span></div><div><b>${M}</b><span>${t("min")}</span></div>`;
+ reloj.textContent=d.toLocaleTimeString(L=="es"?"es-CO":"en-US",{hour:"2-digit",minute:"2-digit"})+" · UTC-5"}
+setInterval(cuenta_,30000);
+// catálogo
+function filtros(){const k=["todos",...Object.keys(CATS)];
+ document.getElementById("filtros").innerHTML=k.map(c=>`<button class="${c==cat?"on":""}" onclick="cat='${c}';filtros();pintar()">${c=="todos"?t("todos"):CATS[c][ix()]}</button>`).join("")}
+function pintar(){const i=ix();
+ grid.innerHTML=P.filter(p=>cat=="todos"||p.c==cat).map(p=>`<div class="prod"><div class="ph"><img src="${p.f}" alt="${p.n[i]}" loading="lazy"><span class="tag">${CATS[p.c][i]}</span></div><div class="bd"><h3>${p.n[i]}</h3><p>${p.d[i]}</p><span class="pr">${t("precio")}</span><button onclick="add('${p.id}')">${t("agregar")}</button></div></div>`).join("");
+ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("vis");io.unobserve(e.target)}}),{threshold:0,rootMargin:"0px 0px 80px 0px"});setTimeout(()=>document.querySelectorAll(".prod").forEach(e=>e.classList.add("vis")),2500);
+ document.querySelectorAll(".prod").forEach((e,k)=>{e.style.transitionDelay=(k%4)*80+"ms";io.observe(e)})}
+// kit
+function opts_(){opts.innerHTML=KIT.map(id=>{const p=P.find(x=>x.id==id);return `<div class="opt ${kit.includes(id)?"on":""}" onclick="tog('${id}')"><img src="${p.f}" alt=""><div class="n">${p.n[ix()]}<small>${CATS[p.c][ix()]}</small></div><span class="ck"></span></div>`}).join("")}
+function tog(id){kit=kit.includes(id)?kit.filter(x=>x!=id):[...kit,id];opts_();kitPrev()}
+function kitPrev(){fotosKit.innerHTML=kit.length?kit.map(id=>`<img src="${P.find(x=>x.id==id).f}" alt="">`).join(""):`<div class="vacio">${t("kVacio")}</div>`}
+function addKit(){if(!kit.length){toast(t("kVacio"));return}
+ let n=t("kKit")+": "+kit.map(id=>P.find(x=>x.id==id).n[ix()]).join(" + ");
+ if(kPara.value.trim())n+=` · ${t("kPara2")}: ${kPara.value.trim()}`;if(kNota.value.trim())n+=` · ${kNota.value.trim()}`;
+ cart.push({id:"kit-"+Date.now(),name:n,f:P.find(x=>x.id==kit[0]).f,q:1});kit=[];kPara.value="";kNota.value="";opts_();kitPrev();guardar();toast()}
+// carrito
+function add(id){const p=P.find(x=>x.id==id),e=cart.find(x=>x.id==id);if(e)e.q++;else cart.push({id,q:1,f:p.f});guardar();toast()}
+function nom(it){const p=P.find(x=>x.id==it.id);return p?p.n[ix()]:it.name}
+function guardar(){localSet("go_cart",JSON.stringify(cart));carrito()}
+function carrito(){cartN.textContent=cart.reduce((a,b)=>a+b.q,0);
+ items.innerHTML=cart.length?cart.map((it,i)=>`<div class="item"><img src="${it.f}" alt=""><div class="n">${nom(it)}</div><div class="q"><button onclick="qty(${i},-1)">−</button><b>${it.q}</b><button onclick="qty(${i},1)">+</button></div></div>`).join(""):`<p style="color:#8a6f50">${t("vacio")}</p>`}
+function qty(i,d){cart[i].q+=d;if(cart[i].q<1)cart.splice(i,1);guardar()}
+function vaciar(){cart=[];guardar()}
+const cart_=document.getElementById("cart");
+function abrir(){carrito();cart_.classList.add("on")}
+function cerrar(){cart_.classList.remove("on")}
+function enviar(){if(!cart.length)return hola();
+ let m=t("ped")+"\n\n"+cart.map(it=>`• ${it.q} x ${nom(it)}`).join("\n");
+ if(cNom.value)m+=`\n\n${t("nombre")}: ${cNom.value}`;if(cDir.value)m+=`\n${t("entrega")}: ${cDir.value}`;
+ window.open("https://wa.me/"+WA+"?text="+encodeURIComponent(m),"_blank")}
+function hola(){window.open("https://wa.me/"+WA+"?text="+encodeURIComponent(t("hola")),"_blank")}
+function toast(msg){const e=document.getElementById("toast");e.textContent=msg||t("ok");e.classList.add("on");setTimeout(()=>e.classList.remove("on"),1700)}
+// galería
+gal.innerHTML=GAL.map(g=>`<img src="fotos/${g}.jpg" alt="" loading="lazy" onclick="lbImg.src=this.src;lb.classList.add('on')">`).join("");
+// licencia 6 meses
+function lic(){const v=bog()>new Date(2027,4,7,23,59);const e=document.getElementById("lic");e.textContent=v?t("licV"):t("lic");e.classList.toggle("v",v)}
+idioma(L);
+if("serviceWorker" in navigator)navigator.serviceWorker.register("sw.js").catch(()=>{});
+</script>
+</body>
+</html>
