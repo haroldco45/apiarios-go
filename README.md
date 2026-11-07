@@ -2,7 +2,7 @@
 
 App (PWA) de Apiarios G&O, Caucasia (Antioquia) — cliente de ExpoCaucasia 2026.
 
-- Catálogo de miel pura, multifloral, en panal y polen, con pedido por WhatsApp (321 432 0118)
+- Catálogo de miel pura, multifloral, en panal y polen, con pedido por WhatsApp (321 432 0118 y 313 635 1754)
 - Sección "Hoy" que cambia en cada visita, con hora de Colombia (UTC-5)
 - Arma tu kit de regalo
 - Español e inglés

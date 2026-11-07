@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Apiarios G&amp;O · Miel pura y polen de abeja · Caucasia</title>
-<meta name="description" content="Apiarios G&amp;O: miel pura, miel multifloral, miel en panal y polen de abeja. Calidad segura y sostenible. Pide por WhatsApp 321 432 0118. Carrera 6 # 17-44, Caucasia.">
+<meta name="description" content="Apiarios G&amp;O: miel pura, miel multifloral, miel en panal y polen de abeja. Calidad segura y sostenible. Pide por WhatsApp 321 432 0118 o 313 635 1754. Carrera 6 # 17-44, Caucasia.">
 <meta name="theme-color" content="#c8871a">
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="icon-192.png">
@@ -262,6 +262,7 @@ footer b{color:#fff}
   <p class="lead" data-t="coLead">Escríbenos para pedidos, encargos al por mayor y regalos empresariales.</p>
   <div class="cgrid">
     <a href="#" onclick="hola();return false"><small>WhatsApp</small><b>321 432 0118</b></a>
+    <a href="#" onclick="hola(WA2);return false"><small>WhatsApp</small><b>313 635 1754</b></a>
     <a href="mailto:milena_merlano@hotmail.com"><small data-t="coMail">Correo</small><b>milena_merlano@hotmail.com</b></a>
     <a href="https://www.google.com/maps/search/?api=1&query=Carrera+6+%2317-44+Caucasia+Antioquia" target="_blank" rel="noopener"><small data-t="coDir">Dirección</small><b>Carrera 6 # 17-44, Caucasia, Antioquia</b></a>
   </div>
@@ -281,7 +282,8 @@ footer b{color:#fff}
   <input id="cNom" data-ph="cNom" placeholder="Tu nombre">
   <input id="cDir" data-ph="cDir" placeholder="Barrio o dirección de entrega">
   <p class="priv" data-t="priv">Tus datos solo se usan para atender tu pedido por WhatsApp (Ley 1581 de 2012). No se guardan en ningún servidor.</p>
-  <button class="btn g" onclick="enviar()" data-t="env">Enviar pedido por WhatsApp</button>
+  <button class="btn g" onclick="enviar()"><span data-t="env">Enviar pedido por WhatsApp</span> · 321 432 0118</button>
+  <button class="btn g" style="background:#1d8a4b" onclick="enviar(WA2)"><span data-t="env">Enviar pedido por WhatsApp</span> · 313 635 1754</button>
   <button class="btn-s" onclick="vaciar()" data-t="vac">Vaciar pedido</button>
 </div></div>
 
@@ -289,7 +291,7 @@ footer b{color:#fff}
 <div id="toast"></div>
 
 <script>
-const WA="573214320118";
+const WA="573214320118",WA2="573136351754";
 const T={
 es:{hm:"Miel pura y polen de abeja",nPed:"Pedido",chip:"Caucasia · ExpoCaucasia 2026",sub:"Miel pura, miel multifloral, miel en panal y polen de abeja. Calidad segura y sostenible, directo de nuestras colmenas a tu mesa.",ver:"Ver productos",esc:"Escribir por WhatsApp",hAnt:"Hoy en Apiarios G&amp;O",h1s:"Producto del día",h2s:"Faltan para Navidad",h3s:"Dato de la colmena",h4s:"Hora en Caucasia",cAnt:"Productos",cTit:"Del panal <b>a tu mesa</b>",cLead:"Agrega lo que quieras al pedido y envíalo por WhatsApp. Apiarios G&amp;O te confirma precio, tamaño disponible y entrega.",kAnt:"Para regalar",kTit:"Arma tu <b>kit dulce</b>",kLead:"Escoge lo que va en el regalo y mira cómo va quedando. Los frascos van con cinta de yute, dije de abeja dorado y cucharita de madera.",tuKit:"Tu kit",kPara:"Para quién es",kNota:"Ocasión o mensaje (cumpleaños, Navidad, amigo secreto)",kAdd:"Agregar kit al pedido",kVacio:"Toca los productos de la izquierda para armar el regalo",kKit:"Kit de regalo",kPara2:"Para",uAnt:"Ideas",uTit:"Cómo <b>disfrutarla</b>",aviso:"No se recomienda dar miel a bebés menores de 1 año. Si tienes alergia al polen o a productos de la colmena, consulta a tu médico antes de consumirlos.",gAnt:"Galería",gTit:"Así se ve <b>de cerca</b>",coAnt:"Contacto",coTit:"Endulza tu día",coLead:"Escríbenos para pedidos, encargos al por mayor y regalos empresariales.",coMail:"Correo",coDir:"Dirección",hecho:"Desarrollada por",der:"Derechos de Autor Reservados",fl:"Pedir por WhatsApp",tuP:"Tu pedido",cerrar:"Cerrar",env:"Enviar pedido por WhatsApp",vac:"Vaciar pedido",cNom:"Tu nombre",cDir:"Barrio o dirección de entrega",priv:"Tus datos solo se usan para atender tu pedido por WhatsApp (Ley 1581 de 2012). No se guardan en ningún servidor.",todos:"Todo",agregar:"Agregar al pedido",precio:"Precio por WhatsApp",vacio:"Tu pedido está vacío. Agrega algo del catálogo.",ok:"Agregado al pedido",lic:"Licencia vigente hasta el 7 de mayo de 2027",licV:"Licencia vencida · renueva con Vibras Positivas HM",dias:"días",horas:"horas",min:"min",hola:"Hola Apiarios G&O, vi su app y quiero información sobre la miel y el polen.",ped:"Hola Apiarios G&O, quiero hacer este pedido:",nombre:"Nombre",entrega:"Entrega",
 cinta:["Miel pura","Miel multifloral","Miel en panal","Polen de abeja","Calidad segura y sostenible","Directo de la colmena","Ideal para regalar","Hecho en Caucasia"],
@@ -368,11 +370,11 @@ function vaciar(){cart=[];guardar()}
 const cart_=document.getElementById("cart");
 function abrir(){carrito();cart_.classList.add("on")}
 function cerrar(){cart_.classList.remove("on")}
-function enviar(){if(!cart.length)return hola();
+function enviar(n){n=n||WA;if(!cart.length)return hola(n);
  let m=t("ped")+"\n\n"+cart.map(it=>`• ${it.q} x ${nom(it)}`).join("\n");
  if(cNom.value)m+=`\n\n${t("nombre")}: ${cNom.value}`;if(cDir.value)m+=`\n${t("entrega")}: ${cDir.value}`;
- window.open("https://wa.me/"+WA+"?text="+encodeURIComponent(m),"_blank")}
-function hola(){window.open("https://wa.me/"+WA+"?text="+encodeURIComponent(t("hola")),"_blank")}
+ window.open("https://wa.me/"+n+"?text="+encodeURIComponent(m),"_blank")}
+function hola(n){window.open("https://wa.me/"+(n||WA)+"?text="+encodeURIComponent(t("hola")),"_blank")}
 function toast(msg){const e=document.getElementById("toast");e.textContent=msg||t("ok");e.classList.add("on");setTimeout(()=>e.classList.remove("on"),1700)}
 // galería
 gal.innerHTML=GAL.map(g=>`<img src="fotos/${g}.jpg" alt="" loading="lazy" onclick="lbImg.src=this.src;lb.classList.add('on')">`).join("");
